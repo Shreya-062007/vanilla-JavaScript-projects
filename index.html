@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sticky naqvbar</title>
+    <title>PUBG FUN</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">logo</a>
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href ="#">ABOUT US</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">PORTIFOLIO</a></li>
-            <li><a href="#">TEAM</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </header>
-    <section class="banner"></section>
+    <section>
+     <audio id="audio" src= "./assets/s.wav" autostart="flase"></audio>
+    </section>
     <script type="text/javascript">
-        window.addEventListener("scroll", function(){
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
+        document.addEventListener("click", function(e)
+        {
+            var body=document.querySelector('body');
+            var bullet =document.createElement('span');
+            var x=e.offsetX;
+            var y=e.offsetY;
+            bullet.style.left=x+'px';
+            bullet.style.top=y+'px';
+            body.appendChild(bullet);
+
+            var audio=document.getElementById('audio');
+            audio.play();
         })
     </script>
 </body>
